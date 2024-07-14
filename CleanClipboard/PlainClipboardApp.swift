@@ -8,12 +8,12 @@
 import SwiftUI
 
 @main
-struct CleanClipboardApp: App {
+struct PlainTextClipboardApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(clipboardManager: appDelegate.clipboardManager)
         }
     }
 }

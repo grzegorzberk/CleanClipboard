@@ -10,10 +10,21 @@ import SwiftUI
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var clipboardManager: ClipboardManager
+    
     var body: some View {
-        Text("Plain Text Clipboard")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding()
+        VStack {
+            Text("Plain Text Clipboard")
+                .font(.headline)
+                .padding()
+            
+            Text(clipboardManager.clipboardContent)
+                .padding()
+                .border(Color.gray, width: 1)
+                .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
     }
 }
 
@@ -21,6 +32,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(clipboardManager: ClipboardManager())
     }
 }

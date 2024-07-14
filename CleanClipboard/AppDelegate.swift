@@ -8,9 +8,8 @@
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var clipboardManager: ClipboardManager?
+    var clipboardManager = ClipboardManager()
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        clipboardManager = ClipboardManager()
     }
 }

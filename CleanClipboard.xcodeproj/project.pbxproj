@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72F9AB502C4441FB00A2A286 /* CleanClipboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB4F2C4441FB00A2A286 /* CleanClipboardApp.swift */; };
+		72F9AB502C4441FB00A2A286 /* PlainClipboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB4F2C4441FB00A2A286 /* PlainClipboardApp.swift */; };
 		72F9AB522C4441FB00A2A286 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB512C4441FB00A2A286 /* ContentView.swift */; };
 		72F9AB542C4441FC00A2A286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F9AB532C4441FC00A2A286 /* Assets.xcassets */; };
 		72F9AB572C4441FC00A2A286 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F9AB562C4441FC00A2A286 /* Preview Assets.xcassets */; };
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		72F9AB4C2C4441FB00A2A286 /* CleanClipboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanClipboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		72F9AB4F2C4441FB00A2A286 /* CleanClipboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanClipboardApp.swift; sourceTree = "<group>"; };
+		72F9AB4F2C4441FB00A2A286 /* PlainClipboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainClipboardApp.swift; sourceTree = "<group>"; };
 		72F9AB512C4441FB00A2A286 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72F9AB532C4441FC00A2A286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72F9AB562C4441FC00A2A286 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		72F9AB4E2C4441FB00A2A286 /* CleanClipboard */ = {
 			isa = PBXGroup;
 			children = (
-				72F9AB4F2C4441FB00A2A286 /* CleanClipboardApp.swift */,
+				72F9AB4F2C4441FB00A2A286 /* PlainClipboardApp.swift */,
 				72F9AB512C4441FB00A2A286 /* ContentView.swift */,
 				72F9AB7C2C44440A00A2A286 /* AppDelegate.swift */,
 				72F9AB7A2C4442B000A2A286 /* ClipboardManager.swift */,
@@ -268,7 +268,7 @@
 				72F9AB7D2C44440A00A2A286 /* AppDelegate.swift in Sources */,
 				72F9AB522C4441FB00A2A286 /* ContentView.swift in Sources */,
 				72F9AB7B2C4442B000A2A286 /* ClipboardManager.swift in Sources */,
-				72F9AB502C4441FB00A2A286 /* CleanClipboardApp.swift in Sources */,
+				72F9AB502C4441FB00A2A286 /* PlainClipboardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +442,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.berk.CleanClipboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -469,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.berk.CleanClipboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

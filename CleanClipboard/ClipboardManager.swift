@@ -7,7 +7,8 @@
 
 import Cocoa
 
-class ClipboardManager {
+class ClipboardManager: ObservableObject {
+    @Published var clipboardContent: String = ""
     var timer: Timer?
     var lastClipboardContent: String?
     
@@ -26,6 +27,9 @@ class ClipboardManager {
                 NSPasteboard.general.clearContents()
                 NSPasteboard.general.setString(plainText, forType: .string)
                 print("Clipboard updated with plain text.")
+                DispatchQueue.main.async {
+                    self.clipboardContent = plainText
+                }
                 lastClipboardContent = plainText
             }
         }
