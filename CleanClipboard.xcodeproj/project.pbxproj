@@ -12,7 +12,6 @@
 		72F9AB542C4441FC00A2A286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F9AB532C4441FC00A2A286 /* Assets.xcassets */; };
 		72F9AB572C4441FC00A2A286 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F9AB562C4441FC00A2A286 /* Preview Assets.xcassets */; };
 		72F9AB622C4441FC00A2A286 /* ClipboardManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB612C4441FC00A2A286 /* ClipboardManagerTests.swift */; };
-		72F9AB6C2C4441FC00A2A286 /* CleanClipboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB6B2C4441FC00A2A286 /* CleanClipboardUITests.swift */; };
 		72F9AB7B2C4442B000A2A286 /* ClipboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB7A2C4442B000A2A286 /* ClipboardManager.swift */; };
 		72F9AB7D2C44440A00A2A286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB7C2C44440A00A2A286 /* AppDelegate.swift */; };
 		72F9AB802C44F43300A2A286 /* ClipboardHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9AB7F2C44F43300A2A286 /* ClipboardHistory.swift */; };
@@ -21,13 +20,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		72F9AB5E2C4441FC00A2A286 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 72F9AB442C4441FB00A2A286 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 72F9AB4B2C4441FB00A2A286;
-			remoteInfo = CleanClipboard;
-		};
-		72F9AB682C4441FC00A2A286 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 72F9AB442C4441FB00A2A286 /* Project object */;
 			proxyType = 1;
@@ -45,8 +37,6 @@
 		72F9AB582C4441FC00A2A286 /* CleanClipboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CleanClipboard.entitlements; sourceTree = "<group>"; };
 		72F9AB5D2C4441FC00A2A286 /* CleanClipboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanClipboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F9AB612C4441FC00A2A286 /* ClipboardManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManagerTests.swift; sourceTree = "<group>"; };
-		72F9AB672C4441FC00A2A286 /* CleanClipboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanClipboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		72F9AB6B2C4441FC00A2A286 /* CleanClipboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanClipboardUITests.swift; sourceTree = "<group>"; };
 		72F9AB7A2C4442B000A2A286 /* ClipboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManager.swift; sourceTree = "<group>"; };
 		72F9AB7C2C44440A00A2A286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72F9AB7F2C44F43300A2A286 /* ClipboardHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardHistory.swift; sourceTree = "<group>"; };
@@ -68,13 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72F9AB642C4441FC00A2A286 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +66,6 @@
 			children = (
 				72F9AB4E2C4441FB00A2A286 /* CleanClipboard */,
 				72F9AB602C4441FC00A2A286 /* CleanClipboardTests */,
-				72F9AB6A2C4441FC00A2A286 /* CleanClipboardUITests */,
 				72F9AB4D2C4441FB00A2A286 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +75,6 @@
 			children = (
 				72F9AB4C2C4441FB00A2A286 /* CleanClipboard.app */,
 				72F9AB5D2C4441FC00A2A286 /* CleanClipboardTests.xctest */,
-				72F9AB672C4441FC00A2A286 /* CleanClipboardUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +82,9 @@
 		72F9AB4E2C4441FB00A2A286 /* CleanClipboard */ = {
 			isa = PBXGroup;
 			children = (
-				72F9AB822C44F7E200A2A286 /* View */,
-				72F9AB812C44F47100A2A286 /* ViewModel */,
 				72F9AB7E2C44F41900A2A286 /* Model */,
+				72F9AB812C44F47100A2A286 /* ViewModel */,
+				72F9AB822C44F7E200A2A286 /* View */,
 				72F9AB4F2C4441FB00A2A286 /* PlainClipboardApp.swift */,
 				72F9AB7C2C44440A00A2A286 /* AppDelegate.swift */,
 				72F9AB532C4441FC00A2A286 /* Assets.xcassets */,
@@ -127,14 +108,6 @@
 				72F9AB612C4441FC00A2A286 /* ClipboardManagerTests.swift */,
 			);
 			path = CleanClipboardTests;
-			sourceTree = "<group>";
-		};
-		72F9AB6A2C4441FC00A2A286 /* CleanClipboardUITests */ = {
-			isa = PBXGroup;
-			children = (
-				72F9AB6B2C4441FC00A2A286 /* CleanClipboardUITests.swift */,
-			);
-			path = CleanClipboardUITests;
 			sourceTree = "<group>";
 		};
 		72F9AB7E2C44F41900A2A286 /* Model */ = {
@@ -200,24 +173,6 @@
 			productReference = 72F9AB5D2C4441FC00A2A286 /* CleanClipboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		72F9AB662C4441FC00A2A286 /* CleanClipboardUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 72F9AB772C4441FC00A2A286 /* Build configuration list for PBXNativeTarget "CleanClipboardUITests" */;
-			buildPhases = (
-				72F9AB632C4441FC00A2A286 /* Sources */,
-				72F9AB642C4441FC00A2A286 /* Frameworks */,
-				72F9AB652C4441FC00A2A286 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				72F9AB692C4441FC00A2A286 /* PBXTargetDependency */,
-			);
-			name = CleanClipboardUITests;
-			productName = CleanClipboardUITests;
-			productReference = 72F9AB672C4441FC00A2A286 /* CleanClipboardUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,10 +187,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					72F9AB5C2C4441FC00A2A286 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 72F9AB4B2C4441FB00A2A286;
-					};
-					72F9AB662C4441FC00A2A286 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 72F9AB4B2C4441FB00A2A286;
 					};
@@ -256,7 +207,6 @@
 			targets = (
 				72F9AB4B2C4441FB00A2A286 /* CleanClipboard */,
 				72F9AB5C2C4441FC00A2A286 /* CleanClipboardTests */,
-				72F9AB662C4441FC00A2A286 /* CleanClipboardUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,13 +222,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		72F9AB5B2C4441FC00A2A286 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		72F9AB652C4441FC00A2A286 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,14 +252,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72F9AB632C4441FC00A2A286 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72F9AB6C2C4441FC00A2A286 /* CleanClipboardUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -324,11 +259,6 @@
 			isa = PBXTargetDependency;
 			target = 72F9AB4B2C4441FB00A2A286 /* CleanClipboard */;
 			targetProxy = 72F9AB5E2C4441FC00A2A286 /* PBXContainerItemProxy */;
-		};
-		72F9AB692C4441FC00A2A286 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 72F9AB4B2C4441FB00A2A286 /* CleanClipboard */;
-			targetProxy = 72F9AB682C4441FC00A2A286 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -543,40 +473,6 @@
 			};
 			name = Release;
 		};
-		72F9AB782C4441FC00A2A286 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F74NQWTQA8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.berk.CleanClipboardUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = CleanClipboard;
-			};
-			name = Debug;
-		};
-		72F9AB792C4441FC00A2A286 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F74NQWTQA8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.berk.CleanClipboardUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = CleanClipboard;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -603,15 +499,6 @@
 			buildConfigurations = (
 				72F9AB752C4441FC00A2A286 /* Debug */,
 				72F9AB762C4441FC00A2A286 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		72F9AB772C4441FC00A2A286 /* Build configuration list for PBXNativeTarget "CleanClipboardUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				72F9AB782C4441FC00A2A286 /* Debug */,
-				72F9AB792C4441FC00A2A286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

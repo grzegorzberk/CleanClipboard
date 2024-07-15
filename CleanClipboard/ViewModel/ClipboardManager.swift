@@ -57,8 +57,11 @@ class ClipboardManager: ObservableObject {
     }
     
     func saveHistory() {
-        if let encodedHistory = try? JSONEncoder().encode(clipboardContent) {
+        do {
+            let encodedHistory = try? JSONEncoder().encode(clipboardHistory)
             UserDefaults.standard.set(encodedHistory, forKey: historyKey)
+        } catch {
+            print("Failed to encode history: \(error)")
         }
     }
     

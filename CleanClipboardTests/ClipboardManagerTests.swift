@@ -20,6 +20,7 @@ class ClipboardManagerTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        UserDefaults.standard.removeObject(forKey: clipboardManager.historyKey)
         clipboardManager = nil
     }
 
@@ -75,16 +76,18 @@ class ClipboardManagerTests: XCTestCase {
         let testString = "Test string"
         clipboardManager.addToHistory(testString)
         clipboardManager.saveHistory()
-        
-        let savedHistory = UserDefaults.standard.data(forKey: clipboardManager.historyKey)
-        XCTAssertNotNil(savedHistory)
-        
-        if let savedHistory = savedHistory,
-           let decodedHistory = try? JSONDecoder().decode([ClipboardHistory].self, from: savedHistory) {
-            XCTAssertEqual(decodedHistory.count, 1)
-            XCTAssertEqual(decodedHistory.first?.content, testString)
-        } else {
-            XCTFail("Failed to decode saved history")
+            
+        guard let savedHistory = UserDefaults.standard.data(forKey: clipboardManager.historyKey) else {
+                XCTFail("Failed to retrieve saved history")
+                return
+            }
+            
+        do {
+                let decodedHistory = try JSONDecoder().decode([ClipboardHistory].self, from: savedHistory)
+                XCTAssertEqual(decodedHistory.count, 1)
+                XCTAssertEqual(decodedHistory.first?.content, testString)
+            } catch {
+                XCTFail("Failed to decode saved history: \(error)")
         }
     }
     
@@ -152,6 +155,8 @@ class ClipboardManagerTests: XCTestCase {
     
     func testPerformance() throws {
         self.measure {
+            clipboardManager.clipboardHistory.removeAll()
+            UserDefaults.standard.removeObject(forKey: clipboardManager.historyKey)
             for i in 0..<1000 {
                 clipboardManager.addToHistory("Test string \(i)")
             }
@@ -162,14 +167,14 @@ class ClipboardManagerTests: XCTestCase {
     func testDateFormatting() throws {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
+        let data = formatter.string(from: Date())
         
-        let date = formatter.date(from: "2023-07-14")!
-        let historyItem = ClipboardHistory(content: "Test", timestamp: date)
-        
-        clipboardManager.addToHistory(historyItem.content)
+        let testString = "Test string"
+
+        clipboardManager.addToHistory(testString)
         let groupedHistory = clipboardManager.groupedHistory()
         
-        XCTAssertNotNil(groupedHistory["2023-07-14"])
-        XCTAssertEqual(groupedHistory["2023-07-14"]?.count, 1)
+        XCTAssertNotNil(groupedHistory[data])
+        XCTAssertEqual(groupedHistory[data]?.count, 1)
     }
 }
