@@ -11,6 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var clipboardManager: ClipboardManager
+    @State private var showSidebar = false
     
     var body: some View {
         VStack {
@@ -18,13 +19,31 @@ struct ContentView: View {
                 .font(.headline)
                 .padding()
             
+            Spacer()
+            
             Text(clipboardManager.clipboardContent)
                 .padding()
                 .border(Color.gray, width: 1)
                 .frame(maxWidth: .infinity, alignment: .center)
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
+        .toolbar {
+            ToolbarItem(placement: .navigation) {
+                Button (action: {
+                    showSidebar.toggle()
+                }) {
+                    Image(systemName: "sidebar.left")
+                }
+            }
+        }
+        
+        if showSidebar {
+            HistorySidebarView(clipboardManager: clipboardManager)
+                .frame(minWidth: 300)
+        }
     }
 }
 
