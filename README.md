@@ -24,7 +24,7 @@ PlainTextClipboard is a macOS application that monitors your clipboard, removes 
 
 2. Open the project in Xcode:
     ```bash
-    open PlainTextClipboard/PlainTextClipboard.xcodeproj
+    open PlainTextClipboard/CleanClipboard.xcodeproj
     ```
 
 3. Build and run the project in Xcode.
