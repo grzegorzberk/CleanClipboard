@@ -19,7 +19,7 @@ PlainTextClipboard is a macOS application that monitors your clipboard, removes 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/PlainTextClipboard.git
+    git clone https://github.com/yourusername/CleanClipboard.git
     ```
 
 2. Open the project in Xcode:
