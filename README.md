@@ -1,6 +1,6 @@
-# PlainTextClipboard
+# CleanClipboard
 
-PlainTextClipboard is a macOS application that monitors your clipboard, removes any formatting from the text, and maintains a history of clipboard contents. This project is currently in beta, and I am actively working on adding new features.
+CleanClipboard is a macOS application that monitors your clipboard, removes any formatting from the text, and maintains a history of clipboard contents. This project is currently in beta, and I am actively working on adding new features.
 
 ## Features
 
@@ -42,7 +42,7 @@ PlainTextClipboard is a macOS application that monitors your clipboard, removes 
 To run the tests for this project, follow these steps:
 
 1. Open the project in Xcode.
-2. Select the `PlainTextClipboardTests` scheme.
+2. Select the `CleanClipboardTests` scheme.
 3. Press `Cmd + U` to run all tests, including unit and UI tests.
 
 ## Contributing
