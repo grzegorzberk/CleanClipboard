@@ -25,6 +25,7 @@ struct ContentView: View {
                 .padding()
                 .border(Color.gray, width: 1)
                 .frame(maxWidth: .infinity, alignment: .center)
+                .accessibilityIdentifier("clipboardContent")
             
             Spacer()
         }
@@ -36,6 +37,7 @@ struct ContentView: View {
                     showSidebar.toggle()
                 }) {
                     Image(systemName: "sidebar.left")
+                        .accessibilityIdentifier("sidebarButton")
                 }
             }
         }
@@ -43,6 +45,7 @@ struct ContentView: View {
         if showSidebar {
             HistorySidebarView(clipboardManager: clipboardManager)
                 .frame(minWidth: 300)
+                .accessibilityIdentifier("historySidebar")
         }
     }
 }
